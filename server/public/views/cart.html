@@ -1,0 +1,110 @@
+  <div class="cartContainer" ng-controller="cartController">
+    <div class="cartHeader">
+      <i class="bi bi-cart-fill"></i>
+    </div>
+    <div class="emptyCart" ng-if="cart.length == 0">
+      <h2>Your cart is empty!</h2>
+      <h2>Add items to get started.</h2>
+    </div>
+    <div class="cart" ng-if="cart.length > 0">
+      <div class="items">
+        <div class="cartItem" ng-repeat="item in cart">
+          <h4>{{item.name}}</h4>
+          <p>Qt:{{item.quantity}}</p>
+          <i ng-click="addAnotherItemToCart(item)" id="qtPlus" class="bi bi-plus-circle-fill"></i>
+          <i ng-click="removeItemFromCart(item)" id="qtMinus" class="bi bi-dash-circle-fill"></i>
+          <p>${{item.price.toFixed(2)}}</p>
+          <i ng-click="removeEntireItemFromCart(item)" class="bi bi-trash-fill"></i>
+        </div>
+      </div>
+      <div class="cartTotal">
+        <p>Subtotal: ${{getSubtotal()}}</p>
+        <p>Tax: ${{getTax()}}</p>
+        <form id="tipForm" ng-submit="setTip(tip)" class="tipContainer">
+          <label for="tip">Tip: $</label>
+          <input type="text" id="tip" name="tip" ng-model="tip" placeholder="0.00"/>
+        </form>
+        <h3>Total: ${{getTotal()}}</h3>
+      </div>
+      <div class="paymentInfo">
+        <h2>Payment Info</h2>
+        <form id="paymentForm">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="cardHolderName">Card Holder Name</label>
+              <br>
+              <input type="text" id="cardHolderName" name="name" ng-model="paymentInfo.cardHolderName" placeholder="John Smith"/>
+            </div>
+            <div class="col-md-6">
+              <label for="cardNumber">Card Number</label>
+              <br>
+              <input type="text" id="cardNumber" name="cardNumber" ng-model="paymentInfo.cardNumber" placeholder="9999-9999-9999-9999"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="expDate">Exp. Date</label>
+              <br>
+              <input type="text" id="expDate" name="expDate" ng-model="paymentInfo.expDate" placeholder="12/21"/>
+            </div>
+            <div class="col-md-6">
+              <label for="securityCode">Security Code</label>
+              <br>
+              <input type="text" id="securityCode" name="securityCode" ng-model="paymentInfo.securityCode" placeholder="999"/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="addressInfo">
+        <h2>Address Info</h2>
+        <form id="addressForm">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="firstName">First Name</label>
+              <br>
+              <input type="text" id="firstName" name="firstName" ng-model="addressInfo.firstName" placeholder="John"/>
+            </div>
+            <div class="col-md-6">
+              <label for="lastName">Last Name</label>
+              <br>
+              <input type="text" id="lastName" name="lastName" ng-model="addressInfo.lastName" placeholder="Smith"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="address">Address</label>
+              <br>
+              <input type="text" id="address" name="address" ng-model="addressInfo.address" placeholder="125th St N"/>
+            </div>
+            <div class="col-md-6">
+              <label for="city">City</label>
+              <br>
+              <input type="text" id="city" name="city" ng-model="addressInfo.city" placeholder="Minneaepolis"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="state">State</label>
+              <br>
+              <input type="text" id="state" name="state" ng-model="addressInfo.state" placeholder="MN"/>
+            </div>
+            <div class="col-md-6">
+              <label for="zip">Zip Code</label>
+              <br>
+              <input type="text" id="zip" name="zip" ng-model="addressInfo.zip" placeholder="12345"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="phone">Phone</label>
+              <br>
+              <input type="text" id="phone" name="phone" ng-model="addressInfo.phone" placeholder="999-999-1234"/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="submit">
+        <button class="btn" ng-click="submitOrder()">Place Order</button>
+      </div>
+    </div>
+  </div>

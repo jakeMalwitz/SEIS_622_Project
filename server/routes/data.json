@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Chips & Salsa",
+    "type": "A",
+    "description": "Blue corn tortillas",
+    "price": 15.00
+  },
+  {
+    "name": "Spring Rolls",
+    "type": "A",
+    "description": "Fresh caught",
+    "price": 14.00
+  },
+  {
+    "name": "Cheese Curds",
+    "type": "A",
+    "description": "Wisconsin cheese",
+    "price": 13.00
+  },
+  {
+    "name": "Buffalo Wings",
+    "type": "A",
+    "description": "Grass-fed",
+    "price": 12.00
+  },
+  {
+    "name": "Salad",
+    "type": "A",
+    "description": "From local farmers",
+    "price": 11.00
+  },
+  {
+    "name": "Salmon",
+    "type": "E",
+    "description": "Fresh caught",
+    "price": 25.00
+  },
+  {
+    "name": "Risotto",
+    "type": "E",
+    "description": "Mushrooms and capers",
+    "price": 24.00
+  },
+  {
+    "name": "Sandwich",
+    "type": "E",
+    "description": "Turky and avocado",
+    "price": 23.00
+  },
+  {
+    "name": "Flatbread",
+    "type": "E",
+    "description": "Mozzerella and basil",
+    "price": 22.00
+  },
+  {
+    "name": "Lemon Pepper Chicken",
+    "type": "E",
+    "description": "Spicy or Mild ",
+    "price": 21.00
+  },
+  {
+    "name": "Rye",
+    "type": "B",
+    "description": "Made this morning",
+    "price": 35.00
+  },
+  {
+    "name": "Sourdough",
+    "type": "B",
+    "description": "Fresh",
+    "price": 34.00
+  },
+  {
+    "name": "Sprouted Wheat",
+    "type": "B",
+    "description": "Made yesterday",
+    "price": 33.00
+  },
+  {
+    "name": "Olive Loaf",
+    "type": "B",
+    "description": "Family Recipe",
+    "price": 32.00
+  },
+  {
+    "name": "Naan",
+    "type": "B",
+    "description": "Family Recipe",
+    "price": 31.00
+  },
+  {
+    "name": "Cookies",
+    "type": "D",
+    "description": "Family Recipe",
+    "price": 45.00
+  },
+  {
+    "name": "Chocolate Cake",
+    "type": "D",
+    "description": "Family Recipe",
+    "price": 44.00
+  },
+  {
+    "name": "Ice Cream",
+    "type": "D",
+    "description": "Family Recipe",
+    "price": 43.00
+  },
+  {
+    "name": "Doughnut",
+    "type": "D",
+    "description": "Family Recipe",
+    "price": 42.00
+  },
+  {
+    "name": "Baklava",
+    "type": "D",
+    "description": "Family Recipe",
+    "price": 41.00
+  }
+]

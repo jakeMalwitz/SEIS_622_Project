@@ -1,0 +1,28 @@
+{
+  "name": "SEIS 622 Project",
+  "version": "1.0.0",
+  "description": "Group Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jake Malwitz, Parul Patel, Austin Fuller, Michael Vue",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "body-parser": "^1.20.1",
+    "bootstrap": "^3.4.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "grunt": "^1.5.3",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "mongodb": "^4.12.1",
+    "mongoose": "^5.11.17",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.11.14"
+  }
+}

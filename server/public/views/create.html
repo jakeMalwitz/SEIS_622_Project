@@ -1,0 +1,31 @@
+<div class="container">
+
+<button ng-click="secondClicked=true">Create Menu Item</button>
+</div>
+
+
+<div class="activityContainer" ng-show="secondClicked">
+<form id="menuItemForm">
+  <label for="menuItemName">Item Name</label>
+  <input type="text" id="menuItemName" name="name" ng-model="name"/>
+<br>
+  <label for="type">Type (Appetizer, Entree, Bread, Dessert)</label>
+  <input type="text" id="type" name="type" ng-model="type"/>
+<br>
+  <label for="description">Description</label>
+  <input type="text" id="description" name="description" ng-model="description"/>
+<br>
+  <label for="price">Price</label>
+  <input type="number" id="pice" name="price" ng-model="price"/>
+<br>
+  <button ng-click="addMenuItem()" ng-click="" ng-hide="secondClick">Save Menu Item</button>
+</form>
+</div>
+
+<div class="col-md-4">
+  <h3>Add More Info!</h3>
+
+  <p>{{menuItem.name}}</p>
+  <p>{{menuItem.type}}</p>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="workouts">
+<div class="createdWO" ng-repeat="workout in all">
+  <h1 editable-text="workout.workoutName">Workout Name: {{workout.workoutName}}</h1>
+  <div class="activitieslist" ng-repeat="activities in workout.activities">
+  <p editable-text="activities.name">Activity: {{ activities.name }}</p>
+  <p editable-text="activities.reps">Reps: {{ activities.reps}}</p>
+  <p editable-text="activities.sets">Sets: {{ activities.sets }}</p>
+  <p editable-text="activities.lbs">Weight: {{ activities.weight }}lbs.</p>
+  <p editable-text="activities.duration"> Duration: {{ activities.duration }} minutes</p>
+</div>
+  <button class="update" ng-click="updateWorkout(workout)">Update</button>
+  <button class="delete" ng-click="deleteWorkout(workout._id)">Delete</button>
+</div>
+</form>
+</div>
+</div>

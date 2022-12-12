@@ -1,0 +1,12 @@
+<div class="listMenuItems">
+  <h1>Appetizers</h1>
+  <div class="menuItem" ng-repeat="item in appetizers">
+    <img/>
+    <div class="itemInfo">
+      <h2>{{item.name}}</h2>
+      <h4>{{item.description}}</h4>
+      <h4>${{item.price}}.00</h4>
+    </div>
+    <button type="button" class="btn" ng-click="addItemToCart(item)">Add to Cart</button>
+  </div>
+</div>
